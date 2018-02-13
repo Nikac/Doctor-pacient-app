@@ -1,0 +1,25 @@
+<h1>Pacijenti</h1>
+<ul class="list-group">
+	<li
+		class="list-group-item"
+		*ngFor="let patient of patients">
+		{{ patient.name }} <br>
+		{{ patient.jmbg }} <br>
+		{{ patient.numCard }}
+		<p>Izabrani lekar: {{patient.doctor}}</p>
+		<select *ngIf="!patient.doctor"
+			name="chooseDoctor"
+			class="form-control"
+			#f
+			(click)="onClick(patient, f.value)"
+			>
+			<option>(izaberite lekara)</option>
+			<option
+				*ngFor="let doctor of doctors; let i =index"
+				[ngValue]="doctor"
+				[selected]="i === (i.length - 1)">{{doctor.name}}</option>
+		</select>
+	</li>
+</ul>
+<br>
+<form-patient></form-patient>

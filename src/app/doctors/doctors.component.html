@@ -1,0 +1,13 @@
+<h1>Doktori</h1>
+<ul class="list-group">
+	<li 
+		class="list-group-item"
+		*ngFor="let doctor of doctors">
+		{{ doctor.name }} <br>
+		{{ doctor.specialization }}		
+	</li>
+</ul>
+<br>
+<form-doctor></form-doctor>
+
+

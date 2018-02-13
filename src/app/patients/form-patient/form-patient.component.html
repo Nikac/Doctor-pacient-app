@@ -1,0 +1,31 @@
+<div class="row">
+	<div class="col">
+		<form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+			<div class="form-group">				
+				<input 
+					type="text" 
+					class="form-control" 	
+					placeholder="Ime i Prezime"
+					ngModel
+					name="name">
+			</div>
+			<div class="form-group">		
+				<input 
+					type="text" 
+					class="form-control" 
+					placeholder="JMBG"
+					ngModel
+					name="jmbg">
+			</div>
+			<div class="form-group">
+				<input 
+					type="text" 
+					class="form-control" 
+					placeholder="Br. Zdravstvenog Kartona"
+					ngModel
+					name="numCard">
+			</div>
+			<button class="btn btn-secondary">Dodaj</button>
+		</form>
+	</div>
+</div>
